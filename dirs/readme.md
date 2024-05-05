@@ -1,4 +1,6 @@
-# INSTRUCTIONS
+```
+instruction set for creating and deploying system dirs
+```
 ```
 #FOLDERS
  sudo mkdir /var/www/html/live/
