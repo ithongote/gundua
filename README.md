@@ -1,2 +1,2 @@
 # product and service discovery platfom
-![DISPLAY](output.mp4)
+![SYSTEM](system.png)
