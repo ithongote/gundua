@@ -1,1 +1,1 @@
-sample qrcode image
+folder contains qrcode images and videos
