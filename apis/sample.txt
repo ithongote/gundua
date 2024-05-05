@@ -1,0 +1,4 @@
+DURATION------->:27   30
+DURATION------->:28   31
+DURATION------->:17   20
+DURATION------->:19   20
