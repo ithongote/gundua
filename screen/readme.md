@@ -1,4 +1,6 @@
-# GENERAL SETUP
+```
+# instruction set for creating and deploying display module
+```
 
 SOFTWARE VIDEO DISPLAYS THAT CAN BE EMBEDDED ON ANY PLATFROM : TV,PHONES,SOCIAL PLATFORMS ,CAR DASHBOADS.
 
