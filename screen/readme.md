@@ -2,6 +2,7 @@
 # instruction set for creating and deploying display module
 ```
 
+```
 SOFTWARE VIDEO DISPLAYS THAT CAN BE EMBEDDED ON ANY PLATFROM : TV,PHONES,SOCIAL PLATFORMS ,CAR DASHBOADS.
 
 *Can use Gpu or Cpu ---Choose opencv options dependinng on preferences*
@@ -11,6 +12,7 @@ SOFTWARE VIDEO DISPLAYS THAT CAN BE EMBEDDED ON ANY PLATFROM : TV,PHONES,SOCIAL 
     `gcc/g++ 7.5.0`
   
 *SCREEN has been optimised to run on cpu . No need for GPU.*
+```
 # Dependencies
 ```
 sudo apt-get install libssl-dev
