@@ -1,1 +1,1 @@
-contains .m3u8 files
+folder contains .m3u8 video files compatible with various platfoms
