@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>stroberi | Client</title>
+    <link rel="stylesheet" href="../assets/vendors/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="../assets/vendors/css/vendor.bundle.base.css">
+    <link rel="stylesheet" href="../assets/vendors/jvectormap/jquery-jvectormap.css">
+    <link rel="stylesheet" href="../assets/vendors/flag-icon-css/css/flag-icon.min.css">
+    <link rel="stylesheet" href="../assets/vendors/owl-carousel-2/owl.carousel.min.css">
+    <link rel="stylesheet" href="../assets/vendors/owl-carousel-2/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../assets/vendors/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../assets/vendors/line-awesome/dist/line-awesome/css/line-awesome.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css?version=1.0.22">
+    <!-- End layout styles -->
+    <link rel="shortcut icon" href="../assets/images/favicon.png" />
+  </head>
+  <body>
+    <div class="container-scroller tabs" >
+      <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
+          <a class="sidebar-brand brand-logo" href="index.html"><img src="../assets/images/logo.svg" alt="logo" /></a>
+          <a class="sidebar-brand brand-logo-mini" href="index.html"><img src="../assets/images/logo-mini.svg" alt="logo" /></a>
+        </div>
+        <ul class="nav tab-links">
+          <li class="nav-item profile">
+            <div class="profile-desc">
+              <div class="profile-pic">
+                <div class="count-indicator">
+                  <img class="img-xs rounded-circle " id="admin-profile-image" src="../assets/images/faces/face15.jpg" alt="">
+                  <span class="count bg-success"></span>
+                </div>
+                <div class="profile-name">
+                  <h5 class="mb-0 font-weight-normal" id="admin-usernames">Name</h5>
+                  <span id="admin-role">Client</span>
+                </div>
+              </div>
+              <a href="#" id="profile-dropdown" data-toggle="dropdown"><i class="mdi mdi-dots-vertical"></i></a>
+              <div class="dropdown-menu dropdown-menu-right sidebar-dropdown preview-list" aria-labelledby="profile-dropdown">
+                <a href="#" class="dropdown-item preview-item">
+                  <div class="preview-thumbnail">
+                    <div class="preview-icon bg-dark rounded-circle">
+                      <i class="las la-user text-success"></i>
+                    </div>
+                  </div>
+                  <div class="preview-item-content">
+                    <p class="preview-subject ellipsis mb-1 text-small" id="admin-usernames">Account settings</p>
+                  </div>
+                </a>
+                <div class="dropdown-divider"></div>
+                <a href="#" class="dropdown-item preview-item">
+                  <div class="preview-thumbnail">
+                    <div class="preview-icon bg-dark rounded-circle">
+                      <i class="las la-envelope  text-info"></i>
+                    </div>
+                  </div>
+                  <div class="preview-item-content">
+                    <p class="preview-subject ellipsis mb-1 text-small" id="admin-email" >Email</p>
+                  </div>
+                </a>
+                <div class="dropdown-divider"></div>
+                <a href="#" class="dropdown-item preview-item">
+                  <div class="preview-thumbnail">
+                    <div class="preview-icon bg-dark rounded-circle">
+                      <i class="mdi mdi-logout text-danger"></i>
+                    </div>
+                  </div>
+                  <div class="preview-item-content">
+                    
+                    <button  type="submit" id="user-logout" class=" btn iq-icon-box-2">
+                      <p class="preview-subject ellipsis mb-1 text-small"  >Log Out</p>
+                  </button>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item nav-category">
+            <span class="nav-link">Navigation</span>
+          </li>
+          <li class="nav-item menu-items">
+            <a class="nav-link active" href="#pending" id="load-home">
+              <span class="menu-icon">
+                <i class="las la-video" ></i>
+              </span>
+              <span class="menu-title">ADVERT</span>
+            </a>
+          </li>
+          <li class="nav-item menu-items">
+            <a class="nav-link" href="#compose"  id="load-compose">
+              <span class="menu-icon">
+                <i class="las la-pen" ></i>
+              </span>
+              <span class="menu-title">COMPOSE</span>
+            </a>
+          </li>
+          <li class="nav-item menu-items">
+            <a class="nav-link" href="#ongoing" id="load-ongoing">
+              <span class="menu-icon">
+                <i class="las la-edit" ></i>
+              </span>
+              <span class="menu-title">DRAFT</span>
+            </a>
+          </li>
+          <li class="nav-item menu-items">
+            <a class="nav-link" href="#chart" id="load-chart">
+              <span class="menu-icon">
+                <i class="mdi mdi-chart-bar" ></i>
+              </span>
+              <span class="menu-title">CHARTS</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- partial -->
+      <div class="container-fluid page-body-wrapper">
+        <!-- partial:partials/_navbar.html -->
+        <nav class="navbar p-0 fixed-top d-flex flex-row">
+          <div class="navbar-brand-wrapper d-flex d-lg-none align-items-center justify-content-center">
+            <a class="navbar-brand brand-logo-mini" href="index.html"><img src="../assets/images/logo-mini.svg" alt="logo" /></a>
+          </div>
+          <div class="navbar-menu-wrapper flex-grow d-flex align-items-stretch">
+            <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+              <span class="mdi mdi-menu"></span>
+            </button>
+            <ul class="navbar-nav w-100">
+              <li class="nav-item w-100">
+                <form class="nav-link mt-2 mt-md-0 d-none d-lg-flex search">
+                  
+                  <input 
+                  id="search-bx" 
+                  autocomplete="off"
+                  inputmode="search" 
+                  type="search" 
+                  name="search-bx" 
+                  placeholder="Search"
+                  class="form-control"  
+                  value=""/>
+                  <i class="fa fa-spinner fa-spin" style="color: green;cursor: pointer;display: none;" id="b-loader"></i>
+                  <button id="search-btn" class="btn btn-link btn-fw" type="submit" name="search-btn" title="Submit Query">
+                      <svg style="width:24px;height:24px" viewBox="0 0 24 24"><path fill="#666666" d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
+                      </svg>
+                  </button>
+                </form>
+              </li>
+              
+              <li class="nav-item dropdown">
+                <a class="nav-link" id="profileDropdown" href="#" data-toggle="dropdown">
+                  <div class="navbar-profile">
+                   
+                    <p id="srch-category" class="mb-0 d-none d-sm-block navbar-profile-name">All</p>
+                    <i class="mdi mdi-menu-down d-none d-sm-block"></i>
+                  </div>
+                </a>
+                <div id="mnu-category" class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="profileDropdown">
+                  <form id="ads" method="post"> 
+
+                      <div class="dropdown-divider"></div>
+                      <a href="#" class="dropdown-item preview-item">
+                        <div class="preview-thumbnail">
+                          <div class="preview-icon bg-dark rounded-circle">
+                            <i class="las la-th" style="color:orange;" ></i>
+                          </div>
+                        </div>
+                        <div class="preview-item-content">
+                          
+                          <button  type="submit" id="load_all" title="ALL ADVERT" class=" btn iq-icon-box-2">
+                            <p class="preview-subject ellipsis mb-1 text-small">All</p>
+                        </button>
+                        </div>
+                      </a>
+
+                      <div class="dropdown-divider"></div>
+                      <a href="#" class="dropdown-item preview-item">
+                        <div class="preview-thumbnail">
+                          <div class="preview-icon bg-dark rounded-circle">
+                            <i class="las la-clock" style="color:yellow;" ></i>
+                          </div>
+                        </div>
+                        <div class="preview-item-content">
+                          <button  type="submit" id="load_pending" title="PENDING" class=" btn iq-icon-box-2">
+                            <p class="preview-subject ellipsis mb-1 text-small">Pending</p>
+                        </button>
+                        </div>
+                      </a>
+
+                      <div class="dropdown-divider"></div>
+                      <a href="#" class="dropdown-item preview-item">
+                        <div class="preview-thumbnail">
+                          <div class="preview-icon bg-dark rounded-circle">
+                            <i class="las la-thumbs-down" style="color:red;" ></i>
+                          </div>
+                        </div>
+                        <div class="preview-item-content">
+                          
+                          <button  type="submit" id="load-rejected" title="REJECTED" class=" btn iq-icon-box-2">
+                            <p class="preview-subject ellipsis mb-1 text-small">Rejected</p>
+                        </button>
+                        </div>
+                      </a>
+
+                      <div class="dropdown-divider"></div>
+                      <a href="#" class="dropdown-item preview-item">
+                        <div class="preview-thumbnail">
+                          <div class="preview-icon bg-dark rounded-circle">
+                            <i class="las la-thumbs-up" style="color:green;"></i>
+                          </div>
+                        </div>
+                        <div class="preview-item-content">
+                          
+                          <button  type="submit" id="load_approaved" title="REVIEWED ADVERT" class=" btn iq-icon-box-2">
+                            <p class="preview-subject ellipsis mb-1 text-small">Approved</p>
+                        </button>
+                        </div>
+                      </a>
+
+                      <div class="dropdown-divider"></div>
+                      <a href="#" class="dropdown-item preview-item">
+                        <div class="preview-thumbnail">
+                          <div class="preview-icon bg-dark rounded-circle">
+                            <i class="las la-trash-restore" style="color:blue;"></i>
+                          </div>
+                        </div>
+                        <div class="preview-item-content">
+                          
+                          <button  type="submit" id="load_terminated" title="DELETED ADVERT" class=" btn iq-icon-box-2">
+                            <p class="preview-subject ellipsis mb-1 text-small"  >Deleted</p>
+                        </button>
+                        </div>
+                      </a>
+
+                  </form>
+                </div>
+              </li>
+
+            </ul>
+           
+            <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+              <span class="mdi mdi-format-line-spacing"></span>
+            </button>
+          </div>
+        </nav>
+        <!-- partial -->
+        <div class="main-panel">
+            <div class="content-wrapper tab-content">
+
+                <div  id="pending" class="tab active">
+                  <div id="advert" class="row"></div>
+                </div>
+            
+                <div id="compose" class="tab">
+                  <div class="card border-none">
+                      <div class="card-body custom-card-space ">
+                          <div class="row" id="load-budget-results">
+                              <div class="col-xl-12">
+                                  <form id="create_campaign" method="post">
+                                      <div class="card-header d-flex justify-content-between">
+                                          <div class="header-title">
+                                              <h6 class="card-title">Create Ad Campaign</h6>
+                                          </div>
+                                          <i class="fa fa-spinner fa-spin" style="color: green;cursor: pointer;display: none;" id="campaign-lde"></i>
+                                      </div>
+                                      <div class="card-body" >
+                                          <div class="new-user-info">
+                                              <div class="row">
+                                                  <!--CAMPAIGN-->
+                                                  <div class="form-group col-md-6">
+                                                      <label for="pno">Name <i style="color:red;">*</i>:</label>
+                                                      <input type="text" class="form-control form-border" id="campaign_name" placeholder="Your Advert Slogan" data-style="py-0" required>
+                                                  </div>
+                                                  <div class="form-group col-md-6">
+                                                      <label for="add1">Category<i style="color:red;">*</i>:</label>
+                                                      <select name="campaign_category" id="campaign_category" class="col-md-12 js-example-basic-single" required>
+      
+                                                          <option>Appliances </option>
+                                                          <option>Apps and Games </option>
+                                                          <option>Arts, Crafts, and Sewing</option>
+                                                          <option>Automotive Parts and Accessories</option>
+                                                          <option>Beauty and Personal Care</option>
+                                                          <option>Books</option>
+                                                          <option>CDs and Vinyl</option>
+                                                          <option>Cell Phones and Accessories</option>
+                                                          <option>Clothing, Shoes and Jewelry</option>
+                                                          <option>Collectibles and Fine Art</option>
+                                                          <option>Computers</option>
+                                                          <option>Electronics</option>
+                                                          <option>Garden and Outdoor</option>
+                                                          <option>Grocery and Gourmet Food</option>
+                                                          <option>Handmade</option>
+                                                          <option>Health, Household and Baby Care</option>
+                                                          <option>Home and Kitchen</option>
+                                                          <option>Industrial and Scientific</option>
+                                                          <option>Luggage and Travel Gear</option>
+                                                          <option>Movies and TV</option>
+                                                          <option>Musical Instruments</option>
+                                                          <option>Office Equipment and Supplies</option>
+                                                          <option>Real Estate and Rentals</option>
+                                                          <option>Sports and Outdoors</option>
+                                                          <option>Tools and Home Improvement</option>
+                                                          <option>Toys and Games</option>
+                                                          <option>Video Games</option>
+                                                          <option>Veterinary and Pet Supplies</option>
+                                                      </select>
+                                                  </div>
+                                              </div>
+                                              <div  style="display: flex;align-items: center;justify-content: center;">
+                                                <button type="submit" class="btn btn-social-icon-text btn-facebook" style="background-color: #062B78;" id="campaign_save_and_close"><i class="las la-save"></i>Save & Close</button>
+                                                <button type="submit" class="btn btn-social-icon-text btn-facebook" style="background-color: #062B78;margin-left: 10px;" id="campaign_continue"><i class="las la-arrow-right"></i>Continue</button>
+                                              </div>
+                                          </div>
+                                          
+                                      </div>
+                                  </form>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+            
+                <div id="ongoing" class="tab">
+                  <div id="ongoing_videos" class="row bg-body p-2"></div>
+                </div>
+            
+                <div id="chart" class="tab">
+                  <div class="row ">
+                    <div class="col-12 grid-margin">
+                      <div class="card">
+                        <div class="card-body">
+                          <h4 class="card-title"> Advert Status</h4>
+                          <div class="table-responsive">
+                            <table class="table">
+                              <thead>
+                                <tr>
+                                  <th> Start </th>
+                                  <th> End</th>
+                                  <th> Length </th>
+                                  <th> Repeat</th>
+                                  <th> Duration </th>
+                                  <th> Budget </th>
+                                  <th> Expenditure</th>
+                                  <th> Balance </th>
+                                </tr>
+                              </thead>
+                              <tbody id="stats">
+                                <tr >
+                                  
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                </div>
+
+            </div>
+          <!--NOTIFICATION-->
+          <a href="#" class="btn btn-sm btn-primary line-height rounded" style="display: none;" data-toggle="alert" data-message="Enabled successfully" id="edge_status" ></a>
+                    
+          <!-- Modal -->
+          <div class="modal fade border-none" id="msg-alert" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                  <div class="modal-content">
+                      <div class="modal-body" >
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true" style="color: greenyellow;">&times;</span>
+                          </button>
+                          <div   class="icon iq-icon-box-2 edit-button   rounded" style="margin:2px;">
+                              <i class="las la-check-circle" style="font-size:64px;color:green;font-weight:bold;"></i>
+                              <p id="msg-body" style="font-size:12px;color:green;font-weight:bold;width:300px;margin-left:100px;"></p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <!--NOTIFICATION-->
+          <button type="button" class="btn btn-primary mt-2" data-toggle="modal" data-target="#msg-alert" id="msg-status" style="display: none;"></button>
+          <!-- Modal error -->
+          <div class="modal fade border-none" id="msg-alert-error" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                  <div class="modal-content">
+                      <div class="modal-body" >
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true" style="color: red;">&times;</span>
+                          </button>
+                          <div   class="icon iq-icon-box-2 edit-button  rounded" style="margin:2px;">
+                              <i class="las la-times-circle" style="font-size:64px;color:red;font-weight:bold;"></i>
+                              <p id="msg-body-error" style="font-size:12px;color:green;font-weight:bold;width:300px;margin-left:100px;"></p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <!--NOTIFICATION-->
+          <button type="button" class="btn btn-primary mt-2" data-toggle="modal" data-target="#msg-alert-error" id="msg-status-error" style="display: none;"></button>
+          </div>
+          <!-- content-wrapper ends -->
+          <!-- partial:partials/_footer.html -->
+       
+          <!-- partial -->
+        </div>
+        <!-- main-panel ends -->
+      </div>
+      <!-- page-body-wrapper ends -->
+    </div>
+    <!-- container-scroller -->
+    <!-- plugins:js -->
+    <script src="../assets/vendors/js/vendor.bundle.base.js"></script>
+    <!-- endinject -->
+    <!-- Plugin js for this page -->
+    <script src="../assets/vendors/chart.js/Chart.min.js"></script>
+    <script src="../assets/vendors/progressbar.js/progressbar.min.js"></script>
+    <script src="../assets/vendors/jvectormap/jquery-jvectormap.min.js"></script>
+    <script src="../assets/vendors/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+    <script src="../assets/vendors/owl-carousel-2/owl.carousel.min.js"></script>
+    <!-- End plugin js for this page -->
+    <!-- inject:js -->
+    <script src="../assets/js/off-canvas.js"></script>
+    <script src="../assets/js/hoverable-collapse.js"></script>
+    <script src="../assets/js/misc.js"></script>
+    <script src="../assets/js/settings.js"></script>
+    <script src="../assets/js/todolist.js"></script>
+    <!-- endinject -->
+    <!-- Custom js for this page -->
+    <script src="../assets/js/dashboard.js"></script>
+    <script src="../assets/apis/client.js?version=1.0.21"></script>
+    <!-- End custom js for this page -->
+    <script>
+      jQuery(document).ready(function() {
+        jQuery('.tabs .tab-links a').on('click', function(e) {
+          var currentAttrValue = jQuery(this).attr('href');
+
+          // Show/Hide Tabs
+          jQuery('.tabs ' + currentAttrValue).show().siblings().hide();
+
+          // Change/remove current tab to active
+          jQuery(this).parent('li').addClass('active').siblings().removeClass('active');
+
+          e.preventDefault();
+	    });
+    });
+    </script>
+  </body>
+</html>
