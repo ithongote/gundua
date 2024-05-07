@@ -1,0 +1,684 @@
+[
+    {
+        "database": "gala",
+        "index": "idxtfdb",
+        "setting": {
+            "analysis": {
+                "analyzer": {
+                    "ngram_analyzer": {
+                        "filter": [
+                            "lowercase"
+                        ],
+                        "type": "custom",
+                        "tokenizer": "ngram_tokenizer"
+                    }
+                },
+                "tokenizer": {
+                    "ngram_tokenizer": {
+                        "token_chars": [
+                            "letter",
+                            "digit",
+                            "punctuation",
+                            "symbol"
+                        ],
+                        "min_gram": "9",
+                        "type": "ngram",
+                        "max_gram": "10"
+                    }
+                }
+            }
+        },
+        "nodes": {
+            "table": "traffic",
+            "columns": [
+                "camera_id",
+                "timestamp",
+                "car_model",
+                "car_color",
+                "car_make",
+                "car_location",
+                "latitude",
+                "longitude",
+                "car_count",
+                "car_route",
+                "car_speed",
+                "car_class",
+                "detection_time",
+                "detection_day",
+                "detection_month",
+                "detection_year",
+                "car_heat_signal",
+                "car_number_plate"
+            ]
+        }
+    },
+    {
+        "database": "gala",
+        "index": "idxpkdb",
+        "setting": {
+            "analysis": {
+                "analyzer": {
+                    "ngram_analyzer": {
+                        "filter": [
+                            "lowercase"
+                        ],
+                        "type": "custom",
+                        "tokenizer": "ngram_tokenizer"
+                    }
+                },
+                "tokenizer": {
+                    "ngram_tokenizer": {
+                        "token_chars": [
+                            "letter",
+                            "digit",
+                            "punctuation",
+                            "symbol"
+                        ],
+                        "min_gram": "9",
+                        "type": "ngram",
+                        "max_gram": "10"
+                    }
+                }
+            }
+        },
+        "nodes": {
+            "table": "parking",
+            "columns": [
+                "camera_id",
+                "timestamp",
+                "car_model",
+                "car_color",
+                "car_make",
+                "car_location",
+                "latitude",
+                "longitude",
+                "car_count",
+                "car_image",
+                "car_class",
+                "car_slot_id",
+                "car_number_plate",
+                "detection_time",
+                "detection_day",
+                "detection_month",
+                "detection_year"
+            ]
+        }
+    },
+    {
+        "database": "gala",
+        "index": "idxpsndb",
+        "setting": {
+            "analysis": {
+                "analyzer": {
+                    "ngram_analyzer": {
+                        "filter": [
+                            "lowercase"
+                        ],
+                        "type": "custom",
+                        "tokenizer": "ngram_tokenizer"
+                    }
+                },
+                "tokenizer": {
+                    "ngram_tokenizer": {
+                        "token_chars": [
+                            "letter",
+                            "digit",
+                            "punctuation",
+                            "symbol"
+                        ],
+                        "min_gram": "9",
+                        "type": "ngram",
+                        "max_gram": "10"
+                    }
+                }
+            }
+        },
+        "nodes": {
+            "table": "person",
+            "columns": [
+                "camera_id",
+                "latitude",
+                "longitude",
+                "timestamp",
+                "person_age",
+                "person_gender",
+                "person_race",
+                "person_religion",
+                "detection_time",
+                "person_emotion",
+                "person_count",
+                "person_height",
+                "person_item",
+                "detection_time",
+                "detection_day",
+                "detection_month",
+                "detection_year"
+            ]
+        }
+    },
+    {
+        "database": "gala",
+        "index": "idxwtdb",
+        "setting": {
+            "analysis": {
+                "analyzer": {
+                    "ngram_analyzer": {
+                        "filter": [
+                            "lowercase"
+                        ],
+                        "type": "custom",
+                        "tokenizer": "ngram_tokenizer"
+                    }
+                },
+                "tokenizer": {
+                    "ngram_tokenizer": {
+                        "token_chars": [
+                            "letter",
+                            "digit",
+                            "punctuation",
+                            "symbol"
+                        ],
+                        "min_gram": "9",
+                        "type": "ngram",
+                        "max_gram": "10"
+                    }
+                }
+            }
+        },
+        "nodes": {
+            "table": "weather",
+            "columns": [
+                "sensor_id",
+                "latitude",
+                "longitude",
+                "timestamp",
+                "weather_status",
+                "weather_year",
+                "weather_time",
+                "weather_day",
+                "weather_month",
+                "weather_location"
+            ]
+        }
+    },
+    {
+        "database": "gala",
+        "index": "idxbtsdb",
+        "setting": {
+            "analysis": {
+                "analyzer": {
+                    "ngram_analyzer": {
+                        "filter": [
+                            "lowercase"
+                        ],
+                        "type": "custom",
+                        "tokenizer": "ngram_tokenizer"
+                    }
+                },
+                "tokenizer": {
+                    "ngram_tokenizer": {
+                        "token_chars": [
+                            "letter",
+                            "digit",
+                            "punctuation",
+                            "symbol"
+                        ],
+                        "min_gram": "9",
+                        "type": "ngram",
+                        "max_gram": "10"
+                    }
+                }
+            }
+        },
+        "nodes": {
+            "table": "gsm",
+            "columns": [
+                "sensor_id",
+                "timestamp",
+                "sms",
+                "imei",
+                "day",
+                "month", 
+                "year",
+                "latitude",
+                "longitude",
+                "device",
+                "distance"
+            ]
+        }
+    },
+    {
+        "database": "gala",
+        "index": "idxbdb",
+        "setting": {
+            "analysis": {
+                "analyzer": {
+                    "ngram_analyzer": {
+                        "filter": [
+                            "lowercase"
+                        ],
+                        "type": "custom",
+                        "tokenizer": "ngram_tokenizer"
+                    }
+                },
+                "tokenizer": {
+                    "ngram_tokenizer": {
+                        "token_chars": [
+                            "letter",
+                            "digit",
+                            "punctuation",
+                            "symbol"
+                        ],
+                        "min_gram": "9",
+                        "type": "ngram",
+                        "max_gram": "10"
+                    }
+                }
+            }
+        },
+        "nodes": {
+            "table": "billboard",
+            "columns": [
+                "billboard_id",
+                "billboard_image",
+                "billboard_daily_views",
+                "billboard_availability",
+                "billboard_duration",
+                "billboard_dimension",
+                "billboard_name",
+                "billboard_latitude",
+                "billboard_longitude",
+                "billboard_ip_address",
+                "billboard_status",
+                "billboard_screen_count",
+                "billboard_pid",
+                "billboard_city",
+                "billboard_state",
+                "billboard_zip",
+                "billboard_county",
+                "billboard_vcpus",
+                "billboard_country",
+                "billboard_model",
+                "billboard_width",
+                "billboard_height",
+                "billboard_owner_name",
+                "billboard_admin_id",
+                "billboard_agency_id",
+                "billboard_sign_placement",
+                "billboard_traffic_direction",
+                "billboard_display_description",
+                "zoom_level"
+            ]
+        }
+   },
+   {
+        "database": "gala",
+        "index": "idxadb",
+        "setting": {
+            "analysis": {
+                "analyzer": {
+                    "ngram_analyzer": {
+                        "filter": [
+                            "lowercase"
+                        ],
+                        "type": "custom",
+                        "tokenizer": "ngram_tokenizer"
+                    }
+                },
+                "tokenizer": {
+                    "ngram_tokenizer": {
+                        "token_chars": [
+                            "letter",
+                            "digit",
+                            "punctuation",
+                            "symbol"
+                        ],
+                        "min_gram": "9",
+                        "type": "ngram",
+                        "max_gram": "10"
+                    }
+                }
+            }
+        },
+        "nodes": {
+            "table": "advert",
+            "columns": [
+                "id",
+                "advert_id",
+                "advert_month",
+                "advert_date",
+                "advert_year",
+                "advert_dow",
+                "advert_time",
+                "advert_cost",
+                "advert_size",
+                "advert_period",
+                "advert_edge_id",
+                "advert_edge_pos",
+                "advert_frequency",
+                "advert_agency_id",
+                "advert_slot_count",
+                "advert_customer_id",
+                "advert_campaign_id",
+                "advert_expected_time",
+                "advert_edge_endpoint",
+                "advert_predicted_time",
+                "advert_termination_time"
+            ]
+        }
+    },
+    {
+        "database": "gala",
+        "index": "idxudb",
+        "setting": {
+            "analysis": {
+                "analyzer": {
+                    "ngram_analyzer": {
+                        "filter": [
+                            "lowercase"
+                        ],
+                        "type": "custom",
+                        "tokenizer": "ngram_tokenizer"
+                    }
+                },
+                "tokenizer": {
+                    "ngram_tokenizer": {
+                        "token_chars": [
+                            "letter",
+                            "digit",
+                            "punctuation",
+                            "symbol"
+                        ],
+                        "min_gram": "9",
+                        "type": "ngram",
+                        "max_gram": "10"
+                    }
+                }
+            }
+        },
+        "nodes": {
+            "table": "users",
+            "columns": [
+               "user_id",
+               "first_name",
+               "last_name",
+               "user_email",
+               "user_role",
+               "user_status",
+               "user_image",
+               "user_gender",
+               "user_agency",
+               "user_agency_id",
+               "user_password",
+               "user_telephone",
+               "user_date_of_birth",
+               "user_registration_date"
+            ]
+        }
+    },
+    {
+        "database": "gala",
+        "index": "idxuldb",
+        "setting": {
+            "analysis": {
+                "analyzer": {
+                    "ngram_analyzer": {
+                        "filter": [
+                            "lowercase"
+                        ],
+                        "type": "custom",
+                        "tokenizer": "ngram_tokenizer"
+                    }
+                },
+                "tokenizer": {
+                    "ngram_tokenizer": {
+                        "token_chars": [
+                            "letter",
+                            "digit",
+                            "punctuation",
+                            "symbol"
+                        ],
+                        "min_gram": "9",
+                        "type": "ngram",
+                        "max_gram": "10"
+                    }
+                }
+            }
+        },
+        "nodes": {
+            "table": "userlogs",
+            "columns": [
+               "user_telephone",
+               "user_login_date",
+               "user_logout_date",
+               "user_device",
+               "user_location"
+            ]
+        }
+    },
+    {
+        "database": "gala",
+        "index": "idxaldb",
+        "setting": {
+            "analysis": {
+                "analyzer": {
+                    "ngram_analyzer": {
+                        "filter": [
+                            "lowercase"
+                        ],
+                        "type": "custom",
+                        "tokenizer": "ngram_tokenizer"
+                    }
+                },
+                "tokenizer": {
+                    "ngram_tokenizer": {
+                        "token_chars": [
+                            "letter",
+                            "digit",
+                            "punctuation",
+                            "symbol"
+                        ],
+                        "min_gram": "9",
+                        "type": "ngram",
+                        "max_gram": "10"
+                    }
+                }
+            }
+        },
+        "nodes": {
+            "table": "advertlogs",
+            "columns": [
+               "advert_id",
+               "advert_started_on",
+               "advert_stopped_on",
+               "billboard_id",
+               "business_id",
+               "advert_status"
+            ]
+        }
+    },
+    {
+        "database": "gala",
+        "index": "idxbldb",
+        "setting": {
+            "analysis": {
+                "analyzer": {
+                    "ngram_analyzer": {
+                        "filter": [
+                            "lowercase"
+                        ],
+                        "type": "custom",
+                        "tokenizer": "ngram_tokenizer"
+                    }
+                },
+                "tokenizer": {
+                    "ngram_tokenizer": {
+                        "token_chars": [
+                            "letter",
+                            "digit",
+                            "punctuation",
+                            "symbol"
+                        ],
+                        "min_gram": "9",
+                        "type": "ngram",
+                        "max_gram": "10"
+                    }
+                }
+            }
+        },
+        "nodes": {
+            "table": "billboardlogs",
+            "columns": [
+               "billboard_id",
+               "billboard_started_on",
+               "billboard_stopped_on",
+               "billboard_process_id",
+               "billboard_status"
+            ]
+        }
+    },
+    {
+        "database": "gala",
+        "index": "idxblocdb",
+        "setting": {
+            "analysis": {
+                "analyzer": {
+                    "ngram_analyzer": {
+                        "filter": [
+                            "lowercase"
+                        ],
+                        "type": "custom",
+                        "tokenizer": "ngram_tokenizer"
+                    }
+                },
+                "tokenizer": {
+                    "ngram_tokenizer": {
+                        "token_chars": [
+                            "letter",
+                            "digit",
+                            "punctuation",
+                            "symbol"
+                        ],
+                        "min_gram": "9",
+                        "type": "ngram",
+                        "max_gram": "10"
+                    }
+                }
+            }
+        },
+        "nodes": {
+            "table": "locations",
+            "columns": [
+                "city",
+                "state",
+                "zip",
+                "county",
+                "country",
+                "names"
+            ]
+        }
+    },
+    {
+        "database": "gala",
+        "index": "idxcpdb",
+        "setting": {
+            "analysis": {
+                "analyzer": {
+                    "ngram_analyzer": {
+                        "filter": [
+                            "lowercase"
+                        ],
+                        "type": "custom",
+                        "tokenizer": "ngram_tokenizer"
+                    }
+                },
+                "tokenizer": {
+                    "ngram_tokenizer": {
+                        "token_chars": [
+                            "letter",
+                            "digit",
+                            "punctuation",
+                            "symbol"
+                        ],
+                        "min_gram": "9",
+                        "type": "ngram",
+                        "max_gram": "10"
+                    }
+                }
+            }
+        },
+        "nodes": {
+            "table": "campaigns",
+            "columns": [
+                "campaign_id",
+                "location_id",
+                "business_id",
+                "daily_budget",
+                "campaign_start_date",
+                "campaign_end_date",
+                "campaign_status",
+                "campaign_name",
+                "campaign_media_type",
+                "campaign_owner_id",
+                "campaign_category",
+                "campaign_agency_id",
+                "campaign_media_content",
+                "campaign_media_position",
+                "campaign_poster",
+                "campaign_media_xpos",
+                "campaign_media_ypos",
+                "campaign_media_width",
+                "campaign_media_height",
+                "campaign_media_length",
+                "campaign_billboard_owner"
+            ]
+        }
+    },
+    {
+        "database": "gala",
+        "index": "idxagdb",
+        "setting": {
+            "analysis": {
+                "analyzer": {
+                    "ngram_analyzer": {
+                        "filter": [
+                            "lowercase"
+                        ],
+                        "type": "custom",
+                        "tokenizer": "ngram_tokenizer"
+                    }
+                },
+                "tokenizer": {
+                    "ngram_tokenizer": {
+                        "token_chars": [
+                            "letter",
+                            "digit",
+                            "punctuation",
+                            "symbol"
+                        ],
+                        "min_gram": "9",
+                        "type": "ngram",
+                        "max_gram": "10"
+                    }
+                }
+            }
+        },
+        "nodes": {
+            "table": "agency",
+            "columns": [
+                "agency_id",
+                "agency_city",
+                "agency_name",
+                "agency_email",
+                "agency_country",
+                "agency_telephone1",
+                "agency_telephone2",
+                "agency_adddress",
+                "agency_status",
+                "agency_location",
+                "agency_creation_time",
+                "agency_termination_time"
+            ]
+        }
+   }
+]
